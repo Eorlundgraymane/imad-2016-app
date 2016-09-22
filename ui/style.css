@@ -6,6 +6,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.propic
+{
+    float:left;
+}
 .center {
     text-align: center;
 }
