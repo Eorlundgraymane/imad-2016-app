@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
-    background-image: url("imad-2016-app/ui/LIFE.jpg");
+    background-image: url("/ui/LIFE.jpg");
     background-size: auto;
     background-repeat: no-repeat;
 }
