@@ -1,11 +1,61 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
-    background-image:url("/ui/Coder.png");
-    background-size: 1280px 720px;
-    background-repeat: no-repeat;
+    background-color:grey
+}
+@keyframes demo {
+   0% {opacity:0;}
+   25% {opacity:0.5;}
+   50% {opacity:1;}
+   75% {opacity:0.5;}
+   100%{opacity:0;}
 }
 
+@-moz-keyframes demo { /* Firefox */
+   0% {opacity:0;}
+   25% {opacity:0.5;}
+   50% {opacity:1;}
+   75% {opacity:0.5;}
+   100%{opacity:0;}
+}
+
+@-webkit-keyframes demo { /* Safari and Chrome */
+   0% {opacity:0;}
+   25% {opacity:0.5;}
+   50% {opacity:1;}
+   75% {opacity:0.5;}
+   100%{opacity:0;}
+}
+
+@-o-keyframes demo { /* Opera */
+   0% {opacity:0;}
+   25% {opacity:0.5;}
+   50% {opacity:1;}
+   75% {opacity:0.5;}
+   100%{opacity:0;}
+}
+div.slideIn
+ {
+   animation:demo 7s;
+   -moz-animation:demo 7s; /* Firefox */
+   -webkit-animation:demo 7s; /* Safari and Chrome */
+   -o-animation:demo 7s; /* Opera */
+   animation:demo 7s infinite;
+}
+div.slideIn.slideInFirst
+{
+   animation-delay: 0s,0s;	
+   -moz-animation-delay: 0s, 0s;
+   -webkit-animation-delay: 0s, 0s;
+   -o-animation-delay: 0s, 0s;
+}
+div.slideIn.slideInSecond
+{
+   animation-delay: 3s,5s;	
+   -moz-animation-delay: 3s, 5s;
+   -webkit-animation-delay: 3s, 5s;
+   -o-animation-delay: 3s, 5s;
+}
 .propic
 {
     text-align: left;
