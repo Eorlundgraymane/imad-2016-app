@@ -1,8 +1,7 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
-    background-image: url("LIFE.jpg");
-    background-size: auto;
+    background-image:url("LIFE.jpg");
     background-repeat: no-repeat;
 }
 
