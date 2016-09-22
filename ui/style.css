@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     background-color: white;
     margin-top: 75px;
-    background-image: url('/ui/LIFE.jpg');
+    background-image: url("/ui/LIFE.jpg");
     background-repeat: no-repeat;
 }
 
