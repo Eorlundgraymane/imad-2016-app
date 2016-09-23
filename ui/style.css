@@ -118,3 +118,12 @@ body
     float:left;
     width:150px;
 }
+.margintop
+{
+    padding-top:10px;
+    padding-bottom:10px;
+    width:1300px;
+    border-top:1px solid white;
+    text-align:center;
+    margin-top:20px;
+}
