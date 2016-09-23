@@ -36,29 +36,26 @@ body {
 }
 .slideIn
  {
-   animation:demo 7s;
+   animation:demo 7s infinite;
    -moz-animation:demo 7s; /* Firefox */
    -webkit-animation:demo 7s; /* Safari and Chrome */
    -o-animation:demo 7s; /* Opera */
-   animation:demo 7s infinite;
 }
 .slideInFirst
 {
-    animation:demo 6s;
+    animation:demo 6s infinite;
    animation-delay: 0s,0s;	
    -moz-animation-delay: 0s, 0s;
    -webkit-animation-delay: 0s, 0s;
    -o-animation-delay: 0s, 0s;
-   animation:demo 6s infinite;
 }
 .slideInSecond
 {
-    animation:demo 6s;
+    animation:demo 6s infinite;
    animation-delay: -3s;	
    -moz-animation-delay: -3s;
    -webkit-animation-delay: -3s;
    -o-animation-delay: -3s;
-   animation:demo 6s infinite;
 }
 .propic
 {
