@@ -77,3 +77,8 @@ body {
     height: 200px;
 }
 
+.marginleft
+{
+    float:left;
+    margin-right:20px;
+}
