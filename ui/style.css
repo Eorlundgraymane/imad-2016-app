@@ -6,41 +6,22 @@ body {
 @keyframes demo {
     from{right: 0;}
     to{right: 600px;}
-    0% {opacity:0;}
-    25% {opacity:0.25;}
-    50% {opacity:0.5;}
-    75% {opacity:0.75;}
-    100%{opacity:1;}
 }
 
 @-moz-keyframes demo { /* Firefox */
     from{right: 0;}
     to{right: 600px;}
-    0% {opacity:0;}
-    25% {opacity:0.25;}
-    50% {opacity:0.5;}
-    75% {opacity:0.75;}
-    100%{opacity:1;}
 }
 
 @-webkit-keyframes demo { /* Safari and Chrome */
     from{right: 0;}
     to{right: 600px;}
-    0% {opacity:0;}
-    25% {opacity:0.25;}
-    50% {opacity:0.5;}
-    75% {opacity:0.75;}
-    100%{opacity:1;}
 }
 
 @-o-keyframes demo { /* Opera */
     from{right: 0;}
     to{right: 600px;}
-    0% {opacity:0;}
-    25% {opacity:0.25;}
-    50% {opacity:0.5;}
-    75% {opacity:0.75;}
-    100%{opacity:1;}
+
 }
 .slideIn
  {
