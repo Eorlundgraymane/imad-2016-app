@@ -1,7 +1,6 @@
 body
 {
     background-color: black;
-    background-position: center;
     font-family: sans-serif;
     margin-top: 75px;
     background-position: -200px 50px;
@@ -115,7 +114,7 @@ body
 }
 .slideIn
  {
-   animation:demo 10s
+   animation:demo 10s;
    -moz-animation:demo 7s; /* Firefox */
    -webkit-animation:demo 7s; /* Safari and Chrome */
    -o-animation:demo 7s; /* Opera */
@@ -227,10 +226,7 @@ body
     width:766px;
     border-top:1px solid white;
     text-align:center;
-    margin-top:20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 .boxy
 {
