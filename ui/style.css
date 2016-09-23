@@ -120,9 +120,8 @@ body
 }
 .margintop
 {
-    padding-top:10px;
     padding-bottom:10px;
-    width:1300px;
+    width:auto;
     border-top:1px solid white;
     text-align:center;
     margin-top:20px;
