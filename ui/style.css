@@ -1,9 +1,11 @@
-body {
+body 
+{
     font-family: sans-serif;
     margin-top: 75px;
     background-color:black;
 }
-@keyframes demo {
+@keyframes demo 
+{
     from{right: 0;}
     to{right: 600px;}
     0% {opacity:0;}
@@ -13,7 +15,8 @@ body {
     100%{opacity:1;}
 }
 
-@-moz-keyframes demo { /* Firefox */
+@-moz-keyframes demo 
+{ /* Firefox */
     from{right: 0;}
     to{right: 600px;}
     0% {opacity:0;}
@@ -23,7 +26,8 @@ body {
     100%{opacity:1;}
 }
 
-@-webkit-keyframes demo { /* Safari and Chrome */
+@-webkit-keyframes demo 
+{ /* Safari and Chrome */
     from{right: 0;}
     to{right: 600px;}
     0% {opacity:0;}
@@ -33,7 +37,8 @@ body {
     100%{opacity:1;}
 }
 
-@-o-keyframes demo { /* Opera */
+@-o-keyframes demo 
+{ /* Opera */
     from{right: 0;}
     to{right: 600px;}
     0% {opacity:0;}
@@ -72,21 +77,26 @@ body {
 {
     text-align: left;
 }
-.center {
+.center 
+{
     text-align: center;
 }
 
-.text-big {
+.text-big 
+{
     font-size: 300%;
 }
 
-.bold {
+.bold 
+{
     font-weight: bold;
 }
-.myid{
+.myid
+{
     font-weight:bold;
 }
-.img-medium {
+.img-medium 
+{
     height: 200px;
 }
 
