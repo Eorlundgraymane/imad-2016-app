@@ -54,10 +54,10 @@ body {
 .slideInSecond
 {
     animation:demo 6s;
-   animation-delay: 3s;	
-   -moz-animation-delay: 3s;
-   -webkit-animation-delay: 3s;
-   -o-animation-delay: 3s;
+   animation-delay: -3s;	
+   -moz-animation-delay: -3s;
+   -webkit-animation-delay: -3s;
+   -o-animation-delay: -3s;
    animation:demo 6s infinite;
 }
 .propic
