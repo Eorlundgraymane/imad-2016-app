@@ -202,7 +202,7 @@ body
 
 .marginright
 {
-    padding-left:10px;
+    padding-left: 20px;
     height:760px;
     border-left:1px solid white;
     float:left;
@@ -216,7 +216,7 @@ body
 {
     font-size:20px;
     float:left;
-    width:150px;
+    width:200px;
 }
 .margintop
 {
