@@ -79,6 +79,7 @@ body {
 
 .marginleft
 {
+    border:3px solid white;
     float:left;
     margin-right:20px;
 }
