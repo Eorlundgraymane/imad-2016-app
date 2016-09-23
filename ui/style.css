@@ -36,10 +36,11 @@ body {
 }
 .slideIn
  {
-   animation:demo 7s infinite;
+   animation:demo 7s;
    -moz-animation:demo 7s; /* Firefox */
    -webkit-animation:demo 7s; /* Safari and Chrome */
    -o-animation:demo 7s; /* Opera */
+   animation:demo 7s infinite;
 }
 .slideInFirst
 {
