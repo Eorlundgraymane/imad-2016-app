@@ -34,22 +34,21 @@ body {
    75% {opacity:0.5;}
    100%{opacity:0;}
 }
-div.slideIn
+.slideIn
  {
-   animation:demo 7s;
+   animation:demo 7s infinite;
    -moz-animation:demo 7s; /* Firefox */
    -webkit-animation:demo 7s; /* Safari and Chrome */
    -o-animation:demo 7s; /* Opera */
-   animation:demo 7s infinite;
 }
-div.slideIn.slideInFirst
+.slideInFirst
 {
    animation-delay: 0s,0s;	
    -moz-animation-delay: 0s, 0s;
    -webkit-animation-delay: 0s, 0s;
    -o-animation-delay: 0s, 0s;
 }
-div.slideIn.slideInSecond
+.slideInSecond
 {
    animation-delay: 3s,5s;	
    -moz-animation-delay: 3s, 5s;
