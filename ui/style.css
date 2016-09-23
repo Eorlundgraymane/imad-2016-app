@@ -52,7 +52,7 @@ body {
 }
 .slideInFirst
 {
-    position:relative;
+    position:absolute;
     animation:demo 6s infinite;
    animation-delay: 0s,0s;	
    -moz-animation-delay: 0s, 0s;
@@ -61,7 +61,7 @@ body {
 }
 .slideInSecond
 {
-    position:relative;
+    position:absolute;
     animation:demo 6s infinite;
    animation-delay: -3s;	
    -moz-animation-delay: -3s;
