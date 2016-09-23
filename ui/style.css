@@ -79,7 +79,8 @@ body {
 
 .marginright
 {
-    height:auto;
+    padding-left:10px;
+    height:100%;
     border:1px solid white;
     float:left;
     margin-right:20px;
