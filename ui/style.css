@@ -4,35 +4,43 @@ body {
     background-color:grey
 }
 @keyframes demo {
-   0% {opacity:0;right:0px;}
-   25% {opacity:0.25;right:300px;}
-   50% {opacity:0.5;right:600px;}
-   75% {opacity:0.75;right:700px;}
-   100%{opacity:1;right:750px;}
+    from{right: 0;}
+    to{right: 600px;}
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100%{opacity:1;}
 }
 
 @-moz-keyframes demo { /* Firefox */
-   0% {opacity:0;right:0px;}
-   25% {opacity:0.25;right:300px;}
-   50% {opacity:0.5;right:600px;}
-   75% {opacity:0.75;right:700px;}
-   100%{opacity:1;right:750px;}
+    from{right: 0;}
+    to{right: 600px;}
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100%{opacity:1;}
 }
 
 @-webkit-keyframes demo { /* Safari and Chrome */
-   0% {opacity:0;right:0px;}
-   25% {opacity:0.25;right:300px;}
-   50% {opacity:0.5;right:600px;}
-   75% {opacity:0.75;right:700px;}
-   100%{opacity:1;right:750px;}
+    from{right: 0;}
+    to{right: 600px;}
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100%{opacity:1;}
 }
 
 @-o-keyframes demo { /* Opera */
-   0% {opacity:0;right:0px;}
-   25% {opacity:0.25;right:300px;}
-   50% {opacity:0.5;right:600px;}
-   75% {opacity:0.75;right:700px;}
-   100%{opacity:1;right:750px;}
+    from{right: 0;}
+    to{right: 600px;}
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100%{opacity:1;}
 }
 .slideIn
  {
