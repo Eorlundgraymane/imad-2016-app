@@ -69,7 +69,6 @@ body
   from{right: 0;opacity: 0;}
   to{right: 1150px;opacity: 1;}
 }
-
 @-o-keyframes demo
 { /* Opera */
   from{right: 0;opacity: 0;}
