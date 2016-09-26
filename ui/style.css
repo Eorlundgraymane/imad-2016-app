@@ -107,64 +107,61 @@ body
 .slideIn
  {
    animation:demo 10s;
-   animation-delay: 10s;
-   -moz-animation:demo 7s; /* Firefox */
-   -webkit-animation:demo 7s; /* Safari and Chrome */
-   -o-animation:demo 7s; /* Opera */
+   animation-delay: 3s;
+   -moz-animation-delay: 3s;
+   -webkit-animation-delay:3s;
+   -o-animation-delay:3s;
+   -moz-animation:demo 10s; /* Firefox */
+   -webkit-animation:demo 10s; /* Safari and Chrome */
+   -o-animation:demo 10s; /* Opera */
 }
 .slideInFirst
 {
     position: absolute;
-    animation:demo 5s 1;
-   animation-delay: 0s,0s;
-   -moz-animation-delay: 0s, 0s;
-   -webkit-animation-delay: 0s, 0s;
-   -o-animation-delay: 0s, 0s;
+    animation:demo 3s 1;
+    -moz-animation:demo 3s; /* Firefox */
+    -webkit-animation:demo 3s; /* Safari and Chrome */
+    -o-animation:demo 3s; /* Opera */
 }
 .slideInSecond
 {
     position: absolute;
-    animation:demotwo 6s 1;
-   animation-delay: 0s;
-   -moz-animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   -o-animation-delay: 0s;
+    animation:demotwo 3.5s 1;
+    -moz-animation:demo 3.5s; /* Firefox */
+    -webkit-animation:demo 3.5s; /* Safari and Chrome */
+    -o-animation:demo 3.5s; /* Opera */
 }
 .slideInThird
 {
     position: absolute;
-    animation:demothree 7s 1;
-   animation-delay: 0s;
-   -moz-animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   -o-animation-delay: 0s;
+    animation:demothree 4s 1;
+    -moz-animation:demo 4s; /* Firefox */
+    -webkit-animation:demo 4s; /* Safari and Chrome */
+    -o-animation:demo 4s; /* Opera */
 }
 .slideInFourth
 {
     position: absolute;
-    animation:demofour 8s 1;
-   animation-delay: 0s;
-   -moz-animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   -o-animation-delay: 0s;
+    animation:demofour 4.5s 1;
+    -moz-animation:demo 4.5s; /* Firefox */
+    -webkit-animation:demo 4.5s; /* Safari and Chrome */
+    -o-animation:demo 4.5s; /* Opera */
 }
 .slideInFifth
 {
     position: absolute;
-    animation:demofive 9s 1;
-   animation-delay: 0s;
-   -moz-animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   -o-animation-delay: 0s;
+    animation:demofive 5s 1;
+    -moz-animation:demo 5s; /* Firefox */
+    -webkit-animation:demo 5s; /* Safari and Chrome */
+    -o-animation:demo 5s; /* Opera */
 }
 .slideInSixth
 {
     position: absolute;
-    animation:demofive 10s 1;
-   animation-delay: 0s;
-   -moz-animation-delay: 0s;
-   -webkit-animation-delay: 0s;
-   -o-animation-delay: 0s;
+    animation:demofive 6s 1
+    -moz-animation:demo 6s; /* Firefox */
+    -webkit-animation:demo 6s; /* Safari and Chrome */
+    -o-animation:demo 6s; /* Opera */
 }
 .propic
 {
@@ -173,6 +170,12 @@ body
 .center
 {
     text-align: center;
+}
+.whitelink
+{
+  background-color: white;
+  color: black;
+  font-weight: bold;
 }
 .text-big
 {
@@ -197,7 +200,7 @@ body
     padding-right: 20px;
     border-right: 1px solid white;
     font-size:20px;
-    max-width:250px;
+    width:250px;
 }
 .bodyblack
 {
