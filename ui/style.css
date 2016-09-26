@@ -2,8 +2,7 @@ body
 {
     background-color: black;
     font-family: sans-serif;
-    margin-top: 75px;
-    background-position: -200px 50px;
+    background-position: 200px,50px;
     background-size: cover;
     background-image: url("/ui/Coder.png");
     background-repeat: no-repeat;
@@ -11,116 +10,111 @@ body
 @keyframes demo
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @keyframes demotwo
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @keyframes demothree
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @keyframes demofour
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @keyframes demofive
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @keyframes demosix
 {
     from{right: 0;opacity: 0;}
-    to{right: 1150px;opacity: 1;}
+    to{right: 750px;opacity: 1;}
 }
 @-moz-keyframes demo
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 @-moz-keyframes demotwo
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 @-moz-keyframes demothree
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 @-moz-keyframes demofour
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 @-moz-keyframes demofive
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 
 @-webkit-keyframes demosix
 { /* Safari and Chrome */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 }
 @-o-keyframes demo
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
 }
 @-o-keyframes demotwo
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
 }
 @-o-keyframes demothree
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
 }
 @-o-keyframes demofour
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
 }
 @-o-keyframes demofive
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
 }
 @-o-keyframes demosix
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 1150px;opacity: 1;}
+  to{right: 750px;opacity: 1;}
 
-}
-.namplace
-{
-  align-content: center;
-  position: relative;
-  left: 300px;
 }
 .slideIn
  {
    animation:demo 10s;
+   animation-delay: 10s;
    -moz-animation:demo 7s; /* Firefox */
    -webkit-animation:demo 7s; /* Safari and Chrome */
    -o-animation:demo 7s; /* Opera */
 }
 .slideInFirst
 {
-    position:absolute;
+    position: absolute;
     animation:demo 5s 1;
    animation-delay: 0s,0s;
    -moz-animation-delay: 0s, 0s;
@@ -129,7 +123,7 @@ body
 }
 .slideInSecond
 {
-    position:absolute;
+    position: absolute;
     animation:demotwo 6s 1;
    animation-delay: 0s;
    -moz-animation-delay: 0s;
@@ -138,7 +132,7 @@ body
 }
 .slideInThird
 {
-    position:absolute;
+    position: absolute;
     animation:demothree 7s 1;
    animation-delay: 0s;
    -moz-animation-delay: 0s;
@@ -147,7 +141,7 @@ body
 }
 .slideInFourth
 {
-    position:absolute;
+    position: absolute;
     animation:demofour 8s 1;
    animation-delay: 0s;
    -moz-animation-delay: 0s;
@@ -156,7 +150,7 @@ body
 }
 .slideInFifth
 {
-    position:absolute;
+    position: absolute;
     animation:demofive 9s 1;
    animation-delay: 0s;
    -moz-animation-delay: 0s;
@@ -165,7 +159,7 @@ body
 }
 .slideInSixth
 {
-    position:absolute;
+    position: absolute;
     animation:demofive 10s 1;
    animation-delay: 0s;
    -moz-animation-delay: 0s;
@@ -180,59 +174,33 @@ body
 {
     text-align: center;
 }
-
 .text-big
 {
     font-size: 300%;
-}
-
-.bold
-{
-    font-weight: bold;
-}
-.myid
-{
-    font-weight:bold;
 }
 .img-medium
 {
     height: 200px;
 }
-
-.marginright
+.mainflex
 {
-    padding-left: 20px;
-    height:760px;
-    border-left:1px solid white;
-    float:left;
-    margin-left:20px;
+  display: flex;
 }
-.lefty
+.namplace
 {
-    float:left;
+  width: 950px;
 }
 .navi
 {
+    flex 1;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid white;
     font-size:20px;
-    float:left;
-    width:250px;
+    max-width:250px;
 }
-.margintop
+.bodyblack
 {
-    padding-left: 100px;
-    padding-right:100px;
-    padding-bottom:10px;
-    width:766px;
-    border-top:1px solid white;
-    text-align:center;
-    margin: 20px;
-}
-.boxy
-{
-  position: relative;
-  left: 200px;
-  width: auto;
-  height: 100px;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  background-color: white;
+  color: black;
 }
