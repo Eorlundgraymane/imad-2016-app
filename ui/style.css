@@ -192,7 +192,7 @@ body
 }
 .navi
 {
-    flex 1;
+    flex: 1;
     margin-right: 20px;
     padding-right: 20px;
     border-right: 1px solid white;
