@@ -182,7 +182,7 @@ body
 .slideInSixth
 {
     position: absolute;
-    animation:demosix 6s 1
+    animation:demosix 6s 1;
     -moz-animation:demosix 6s; /* Firefox */
     -webkit-animation:demosix 6s; /* Safari and Chrome */
     -o-animation:demosix 6s; /* Opera */
@@ -202,6 +202,10 @@ body
 .namplace
 {
   width: 950px;
+}
+.remainflex
+{
+    flex: 1;
 }
 .navi
 {
