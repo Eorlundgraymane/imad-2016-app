@@ -2,7 +2,8 @@ body
 {
     background-color: black;
     font-family: sans-serif;
-    background-position: 200px,50px;
+    position: absolute;
+    background-position: 300px -100px;
     background-size: cover;
     background-image: url("/ui/Coder.png");
     background-repeat: no-repeat;
@@ -10,99 +11,122 @@ body
 @keyframes demo
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 775px;opacity: 1;}
 }
 @keyframes demotwo
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 700px;opacity: 1;}
 }
 @keyframes demothree
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 760px;opacity: 1;}
 }
 @keyframes demofour
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 580px;opacity: 1;}
 }
 @keyframes demofive
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 600px;opacity: 1;}
 }
 @keyframes demosix
 {
     from{right: 0;opacity: 0;}
-    to{right: 750px;opacity: 1;}
+    to{right: 500px;opacity: 1;}
 }
 @-moz-keyframes demo
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 500px;opacity: 1;}
 }
 @-moz-keyframes demotwo
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 700px;opacity: 1;}
 }
 @-moz-keyframes demothree
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 760px;opacity: 1;}
 }
 @-moz-keyframes demofour
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 580px;opacity: 1;}
 }
 @-moz-keyframes demofive
 { /* Firefox */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 600px;opacity: 1;}
 }
-
+@-moz-keyframes demosix
+{ /* Firefox */
+  from{right: 0;opacity: 0;}
+  to{right: 500px;opacity: 1;}
+}
+@-webkit-keyframes demo
+{ /* Safari and Chrome */
+  from{right: 0;opacity: 0;}
+  to{right: 500px;opacity: 1;}
+}
+@-webkit-keyframes demotwo
+{ /* Safari and Chrome */
+  from{right: 0;opacity: 0;}
+  to{right: 700px;opacity: 1;}
+}
+@-webkit-keyframes demothree
+{ /* Safari and Chrome */
+  from{right: 0;opacity: 0;}
+  to{right: 760px;opacity: 1;}
+}
+@-webkit-keyframes demofour
+{ /* Safari and Chrome */
+  from{right: 0;opacity: 0;}
+  to{right: 580px;opacity: 1;}
+}
+@-webkit-keyframes demofive
+{ /* Safari and Chrome */
+  from{right: 0;opacity: 0;}
+  to{right: 600px;opacity: 1;}
+}
 @-webkit-keyframes demosix
 { /* Safari and Chrome */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
+  to{right: 500px;opacity: 1;}
 }
 @-o-keyframes demo
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 500px;opacity: 1;}
 }
 @-o-keyframes demotwo
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 700px;opacity: 1;}
 }
 @-o-keyframes demothree
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 760px;opacity: 1;}
 }
 @-o-keyframes demofour
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 580px;opacity: 1;}
 }
 @-o-keyframes demofive
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 590px;opacity: 1;}
 }
 @-o-keyframes demosix
 { /* Opera */
   from{right: 0;opacity: 0;}
-  to{right: 750px;opacity: 1;}
-
+  to{right: 500px;opacity: 1;}
 }
 .slideIn
  {
@@ -127,55 +151,41 @@ body
 {
     position: absolute;
     animation:demotwo 3.5s 1;
-    -moz-animation:demo 3.5s; /* Firefox */
-    -webkit-animation:demo 3.5s; /* Safari and Chrome */
-    -o-animation:demo 3.5s; /* Opera */
+    -moz-animation:demotwo 3.5s; /* Firefox */
+    -webkit-animation:demotwo 3.5s; /* Safari and Chrome */
+    -o-animation:demotwo 3.5s; /* Opera */
 }
 .slideInThird
 {
     position: absolute;
     animation:demothree 4s 1;
-    -moz-animation:demo 4s; /* Firefox */
-    -webkit-animation:demo 4s; /* Safari and Chrome */
-    -o-animation:demo 4s; /* Opera */
+    -moz-animation:demothree 4s; /* Firefox */
+    -webkit-animation:demothree 4s; /* Safari and Chrome */
+    -o-animation:demothree 4s; /* Opera */
 }
 .slideInFourth
 {
     position: absolute;
     animation:demofour 4.5s 1;
-    -moz-animation:demo 4.5s; /* Firefox */
-    -webkit-animation:demo 4.5s; /* Safari and Chrome */
-    -o-animation:demo 4.5s; /* Opera */
+    -moz-animation:demofour 4.5s; /* Firefox */
+    -webkit-animation:demofour 4.5s; /* Safari and Chrome */
+    -o-animation:demofour 4.5s; /* Opera */
 }
 .slideInFifth
 {
     position: absolute;
     animation:demofive 5s 1;
-    -moz-animation:demo 5s; /* Firefox */
-    -webkit-animation:demo 5s; /* Safari and Chrome */
-    -o-animation:demo 5s; /* Opera */
+    -moz-animation:demofive 5s; /* Firefox */
+    -webkit-animation:demofive 5s; /* Safari and Chrome */
+    -o-animation:demofive 5s; /* Opera */
 }
 .slideInSixth
 {
     position: absolute;
-    animation:demofive 6s 1
-    -moz-animation:demo 6s; /* Firefox */
-    -webkit-animation:demo 6s; /* Safari and Chrome */
-    -o-animation:demo 6s; /* Opera */
-}
-.propic
-{
-    text-align: left;
-}
-.center
-{
-    text-align: center;
-}
-.whitelink
-{
-  background-color: white;
-  color: black;
-  font-weight: bold;
+    animation:demosix 6s 1
+    -moz-animation:demosix 6s; /* Firefox */
+    -webkit-animation:demosix 6s; /* Safari and Chrome */
+    -o-animation:demosix 6s; /* Opera */
 }
 .text-big
 {
@@ -202,8 +212,7 @@ body
     font-size:20px;
     width:250px;
 }
-.bodyblack
-{
-  background-color: white;
-  color: black;
-}
+div#links a:link{ color: white;}
+div#links a:active{ color: white;}
+div#links a:visited{ color: white;}
+div#links a:hover{ color: grey; }
