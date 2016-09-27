@@ -19,14 +19,11 @@ app.get('/ui/Coder.png', function (req, res) {
 app.get('/ui/skyforge.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'skyforge.png'));
 });
-app.get('/ui/Realm.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Realm.html'));
-});
 app.get('/ui/main.js',function (req,res){
   res.sendFile(path.join(__dirname,'ui','main.js'));
 });
 app.get('/codeforge',function (req,res){
-    res.send('Page Coming Soon');
+    res.sendFile(path.join(__dirname,'ui','codeforge.html'));
 });
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
