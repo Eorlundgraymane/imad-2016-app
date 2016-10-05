@@ -32,12 +32,12 @@
 @keyframes slideIn
  {
     from {right: -900px;opacity: 0;}
-    to {right: 0px;opacity: 1;}
+    to {right: 0;opacity: 1;}
 }
 @-webkit-keyframes slideIn
  { /* Safari and Chrome */
     from {right: -900px;opacity: 0;}
-    to {right: 0px;opacity: 1;}
+    to {right: 0;opacity: 1;}
 }
 .enterSlide
 {
