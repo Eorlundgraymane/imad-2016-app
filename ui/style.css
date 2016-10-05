@@ -19,7 +19,7 @@
   background-image: url("/ui/Coder.png");
   background-repeat: no-repeat;
 }
-frames fadeIn
+@keyframes fadeIn
 {
   from{opacity: 0;}
   to{opacity: 1;}
