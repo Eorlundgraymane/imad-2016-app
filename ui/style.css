@@ -100,6 +100,7 @@ public class NoCacheFilter implements Filter {
 }
 input
 {
+  -webkit-border-radius: 10px;
   opacity: 0.25;
   font-size: 20px;
   @-webkit-trainsition-property:opacity;
