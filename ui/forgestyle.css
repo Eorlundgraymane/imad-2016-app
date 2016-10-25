@@ -57,7 +57,7 @@ button:hover,input:hover
   opacity: 0.75;
   font-size: 30px;
 }
-button:hover,input:active
+button:active,input:active
 {
   opacity: 1;
   font-size: 25px;
