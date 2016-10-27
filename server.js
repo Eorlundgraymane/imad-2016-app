@@ -46,10 +46,10 @@ app.get('/userlist',function(req,res){//in case the db is called
 		}
 	});
 });
-app.get('/ui/forgestyle.css',function (req,res){//style of the codeforge page
+app.get('/forgestyle.css',function (req,res){//style of the codeforge page
     res.sendFile(path.join(__dirname,'ui', 'forgestyle.css'));
 });
-app.get('/ui/forgemain.js',function (req,res){//the main javascript of the codeforge page
+app.get('/forgemain.js',function (req,res){//the main javascript of the codeforge page
     res.sendFile(path.join(__dirname,'ui', 'forgemain.js'));
 });
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
