@@ -20,25 +20,6 @@
   background-image: url("/ui/Coder.png");
   background-repeat: no-repeat;
 }
-@WebFilter(servletNames={"Faces Servlet"}) // Must match <servlet-name> of your FacesServlet.
-public class NoCacheFilter implements Filter {
-
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse res = (HttpServletResponse) response;
-
-        if (!req.getRequestURI().startsWith(req.getContextPath() + ResourceHandler.RESOURCE_IDENTIFIER)) { // Skip JSF resources (CSS/JS/Images/etc)
-            res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
-            res.setHeader("Pragma", "no-cache"); // HTTP 1.0.
-            res.setDateHeader("Expires", 0); // Proxies.
-        }
-
-        chain.doFilter(request, response);
-    }
-
-    // ...
-}
 @keyframes fadeIn
 {
   from{opacity: 0;}
@@ -103,7 +84,7 @@ input
   -webkit-border-radius: 10px;
   opacity: 0.25;
   font-size: 20px;
-  @-webkit-trainsition-property:opacity;
+  @-webkit-trainsition-property: opacity;
   @-webkit-transition-property: font-size;
   @-webkit-transition-duration: 0.1s;
   @-webkit-transition-timing-function:ease;

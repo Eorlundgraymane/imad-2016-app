@@ -8,20 +8,20 @@ var config =
 			database: 'eorlundgraymane',
 			host: 'db.imad.hasura-app.io',
 			port: 5432,
-			password: 'db-eorlundgraymane-6283'//console provided variable containing password
+			password: process.env.DB_PASSWORD//console provided variable containing password
 		}
 var app = express();
 app.use(morgan('combined'));
 
 var pool = new Pool(config);//create connection pool object
 
-app.get('/userlist',function(req,res){//in case the db is called
-	pool.query('SELECT username FROM "Accounts"' , function(err , result){//what query to be passed
+app.get('/test-db',function(req,res){//in case the db is called
+	pool.query('SELECT * FROM "Accounts"' , function(err , result){//what query to be passed
 		if(err){
 			res.status(500).send(err.toString());//if error is found show 500 error
 		}
 		else{
-			res.send(JSON.stringify(result.rows));//else return the query result as a JSON string
+			res.send(JSON.stringify(result));//else return the query result as a JSON string
 		}
 	});
 });
