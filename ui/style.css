@@ -5,7 +5,7 @@
   position:fixed;
   background-position: 300px -100px;
   background-size: cover;
-  background-image: url("/ui/Coder.png");
+  background-image: url("/Coder.png");
   background-repeat: no-repeat;
 }
 #container
@@ -17,7 +17,7 @@
   position:fixed;
   background-position: 300px -100px;
   background-size: cover;
-  background-image: url("/ui/Coder.png");
+  background-image: url("/Coder.png");
   background-repeat: no-repeat;
 }
 @keyframes fadeIn
