@@ -102,6 +102,22 @@ app.get('/userlist',function(req,res){//in case the db is called
 		}
 	});
 });
+app.get('/current/:data',function (req,res){
+	//under devpt page
+	switch(req.params.data)
+		{
+			case 'page' : res.sendFile(path.join(__dirname,'ui','atherius.html'));
+				break;
+			case 'style':
+				res.sendFile(path.join(__dirname,'ui','atherius.css'));
+				break;
+			case 'script':
+				res.sendFile(path.join(__dirname,'ui','atherius.js'));
+				beak;
+			default:
+				res.send('No such file exists thats under development');
+		}
+});
 app.get('/forgestyle.css',function (req,res){//style of the codeforge page
     res.sendFile(path.join(__dirname,'ui', 'forgestyle.css'));
 });

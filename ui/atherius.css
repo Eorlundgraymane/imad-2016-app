@@ -1,0 +1,72 @@
+.container
+{
+	padding: 0;
+	margin: 0;
+	background-image: url('/Coder.png');
+	background-size: cover;
+  background-position: -300px 100px;
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps();
+	@-webkit-animation-name: fadeIn
+	@-webkit-animation-duration:3s;
+	@-webkit-animarion-iteration-count: infinite;
+	@-webkit-animation-timing-funtion:steps();
+}
+@keyframes fadeIn
+{
+	0%{background-position: -300px 100px;}
+	50%{background-position: -300px -400px;}
+	100%{background-position: -300px -610px;}
+}
+#regform
+{	
+	display: inline;
+	position: absolute;
+	left: 800px;
+	color: white;
+	font-family: century-schoolbook;
+	float: right;
+	max-width: 600px;
+}
+.bannerhead
+{	 
+	padding-left: 30px;
+	padding-top: 3px;
+	background-color: black;
+	font-family: cursive;
+	color: white;
+	width: 100%;
+	border-bottom: 5px solid white;
+}
+.formybuttony
+{
+	width: 400px;
+	font-size: 25px;
+	transition-property: all;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+.formybuttony:hover
+{
+	font-size: 30px;
+}
+.formybuttony:active
+{
+	font-size: 28px;
+}
+.names
+{
+	width: 45%;
+	padding-left: 10px;
+	font-size: 20px;
+	border-radius: 8px;
+}
+.formytexty
+{
+	padding-left: 10px;
+	width: 100%;
+	font-size: 20px;
+	border-radius: 8px;
+}
