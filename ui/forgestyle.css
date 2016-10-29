@@ -1,0 +1,134 @@
+#blog
+{
+    height: 100%;
+    color: white;
+    position: fixed;
+    left: 400px;
+    width: 560px;
+}
+#leftmarg
+{
+    float: left;
+    height: 100%;
+    color: white;
+    position: fixed;
+    padding-left: 100px;
+    padding-right: 10px;
+    border-right: 1px solid white;
+    animation-name: slideLineDown;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+button,input
+{
+  border-radius: 10px;
+  opacity: 0.25;
+  font-size: 20px;
+  @-webkit-trainsition-property: opacity;
+  @-webkit-transition-property: font-size;
+  @-webkit-transition-duration: 0.1s;
+  @-webkit-transition-timing-function: ease;
+  transition-property: font-size;
+  transition-duration: 0.1s;
+  transition-timing-function:ease;
+}
+button:hover,input:hover
+{
+  opacity: 0.75;
+  font-size: 30px;
+}
+button:active,input:active
+{
+  opacity: 1;
+  font-size: 25px;
+}
+@keyframes slideLineDown
+{
+    0%{height: 0%;}
+    60%{height: 40%;}
+    100%{height: 100%;}
+}
+#rightmarg
+{
+    height: 100%;
+    animation-name: slideLineDown;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    padding-right: 100px;
+    padding-left: 10px;
+    color: white;
+    position: fixed;
+    right: 0px;
+    border-left: 1px solid white;
+    height: 100%;
+}
+#container
+{
+    height: 768px;
+    width: 1366px;
+    background-color: black;
+    font-family: sans-serif;
+    position:fixed;
+    background-position: 300px 100px;
+    background-size: cover;
+    background-image: url("/Coder.png");
+    background-repeat: no-repeat;
+}
+#forgehammer
+{
+    position: relative;;
+    font-size: 20px;
+    color:white;
+    animation-name: hammer;
+    -webkit-animation-name:hammer;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+#slideLineRight
+{
+    animation-name: widthIncRight;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    color: white;
+    background-color: red;
+}
+@keyframes widthIncRight
+{
+    0%{width: 0%;}
+    10%{width: 2%;}
+    30%{width: 6%;}
+    50%{width: 14%;}
+    70%{width: 30%;}
+    90%{width: 40%;}
+    100%{width: 100%;}
+}
+@keyframes hammer
+{
+    0%{right: -683px; opacity: 0; font-size: 300px;}
+    34%{right: -683px; opacity: 0; font-size: 300px;}
+    35%{right: -683px; opacity: 1; font-size: 20px;}
+    37%, 55%
+    {
+    transform: translate3d(-10px,0, 10px);
+    }
+
+    39%, 51%
+    {
+    transform: translate3d(10px, 0, -10px);
+    }
+
+    43%, 45%, 49%
+    {
+    transform: translate3d(-10px, 0,10px);
+    }
+
+    43%, 47%
+    {
+    transform: translate3d(10px, 0, -10px);
+    }
+    95%{right: -683px; opacity: 1;}
+    100%{right: 0px; opacity: 1;}
+}
