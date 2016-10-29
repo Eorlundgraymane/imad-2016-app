@@ -16,7 +16,21 @@ app.use(morgan('combined'));
 var pool = new Pool(config);//create connection pool object
 
 app.get('/', function (req, res) {//Root site directory. the first page that gets opened
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+pool.query('SELECT html from "pages" where pagename like '+"'coderider'",function(err,result){
+		if(err){
+			res.status(500).send(err.toString());
+		}
+		else
+			{
+				if(result.rows.length === 0){
+					res.status(404).send('Article not found');		
+				}
+				else{
+					var pageBody = result.rows[0];
+					res.send(pageBody.html);
+				}
+			}
+	});
 });
 app.get('/style.css', function (req, res) {//the style page for the home page
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
