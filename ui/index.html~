@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<title>Code-Rider|Home</title>
+	<link rel = "stylesheet" href="/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="/scripts/coderider"></script>
+<body id = "bodyback">
+  <div id = "container">
+    <div id = "header">
+      <div class = "enterSlide">
+        <h1 class = "whitehead">&lt;Code::Rider&gt;</h1>
+      </div>
+      <div class = "enterFade">
+        <img class = "propic" src= "/madi.png" alt="Riding Programmer Pic">
+      </div>
+    </div>
+    <div class = "navi">
+      <center>
+        <font size = "3px"><b>Realm of Eorlund GrayMane</b></font><hr>
+        <ul class = "enterSlide" style="list-style-type:none">
+            <li><a href = "/pages/codeforge"><input type = "submit" value = "CodeForge"></a></li><hr>
+						<li><a href = "/pages/highway"><input type = "submit" value= "The Highway"></a></li><hr>
+					<li><a href = "/pages/atherius"><input type = "submit" value= "Atherius"></a></li><hr>
+        </ul>
+      </center>
+    </div>
+  </div>
+</body>
+</html>
