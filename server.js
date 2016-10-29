@@ -44,7 +44,8 @@ app.get('/userlist',function(req,res){//in case the db is called
 			res.status(500).send(err.toString());//if error is found show 500 error
 		}
 		else{
-			res.send('<html><link href="/forgestyle.css" rel="stylesheet"/><script type="text/javascript" src="/forgemain.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><body id = "container"><div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[0]["name"])+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br><div id = "leftmarg">More Updates Coming Soon</div></body></html>');//else return the query result as a JSON string
+			var len = JSON.stringify(result.rows[0]["name"]).length;
+			res.send('<html><link href="/forgestyle.css" rel="stylesheet"/><script type="text/javascript" src="/forgemain.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><body id = "container"><div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[0]["name"]).substring(1,len-1)+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br><div id = "leftmarg">More Updates Coming Soon</div></body></html>');//else return the query result as a JSON string
 		}
 	});
 });
