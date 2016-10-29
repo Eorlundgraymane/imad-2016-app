@@ -36,6 +36,59 @@ app.get('/main.js', function (req, res) {//the main javascript file
 app.get('/codeforge',function (req,res){//the first of the three blog pages
     res.sendFile(path.join(__dirname,'ui', 'codeforge.html'));
 });
+app.get('/pages/:pagename',function(req,res){
+	pool.query('SELECT html from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+		if(err){
+			res.status(500).send(err.toString());
+		}
+		else
+			{
+				if(result.rows.length === 0){
+					res.status(404).send('Article not found');		
+				}
+				else{
+					var pageBody = result.rows[0];
+					res.send(pageBody.html);
+				}
+			}
+	});
+});
+app.get('/styles/:pagename',function(req,res){
+	pool.query('SELECT css from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+		if(err){
+			res.status(500).send(err.toString());
+		}
+		else
+			{
+				if(result.rows.length === 0){
+					res.status(404).send('Article not found');		
+				}
+				else{
+					var pageBody = result.rows[0]["css"];
+					var len = pageBody.length;
+					res.send(pageBody);
+				}
+			}
+	});
+});
+app.get('/scripts/:pagename',function(req,res){
+	pool.query('SELECT js from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+		if(err){
+			res.status(500).send(err.toString());
+		}
+		else
+			{
+				if(result.rows.length === 0){
+					res.status(404).send('Article not found');		
+				}
+				else{
+					var pageBody = result.rows[0]["js"];
+					var len = pageBody.length;
+					res.send(pageBody);
+				}
+			}
+	});
+});
 app.get('/userlist',function(req,res){//in case the db is called
 	var email = "rkmenon235@gmail.com";
 	var pwd = "rkm235";
