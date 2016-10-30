@@ -51,7 +51,7 @@ app.get('/codeforge',function (req,res){//the first of the three blog pages
     res.sendFile(path.join(__dirname,'ui', 'codeforge.html'));
 });
 app.get('/pages/:pagename',function(req,res){
-	pool.query('SELECT html from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+	pool.query("SELECT html FROM pages WHERE pagename like $1",[req.params.pagename],function(err,result){
 		if(err){
 			res.status(500).send(err.toString());
 		}
@@ -68,7 +68,7 @@ app.get('/pages/:pagename',function(req,res){
 	});
 });
 app.get('/styles/:pagename',function(req,res){
-	pool.query('SELECT css from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+	pool.query("SELECT css from pages where pagename like $1",[req.params.pagename],function(err,result){
 		if(err){
 			res.status(500).send(err.toString());
 		}
@@ -86,7 +86,7 @@ app.get('/styles/:pagename',function(req,res){
 	});
 });
 app.get('/scripts/:pagename',function(req,res){
-	pool.query('SELECT js from "pages" where pagename like '+"'"+req.params.pagename+"'",function(err,result){
+	pool.query("SELECT js FROM pages WHERE pagename like $1",[req.params.pagename],function(err,result){
 		if(err){
 			res.status(500).send(err.toString());
 		}
