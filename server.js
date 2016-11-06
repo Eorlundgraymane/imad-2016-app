@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;//Postgres connetion pool
+var crypto = require('crypto');
+var bodyParser = require('body-parser');
 var config = 
 		{
 			user: 'eorlundgraymane',//credentials used to login to db in this case imad db
@@ -12,26 +14,67 @@ var config =
 		}
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var pool = new Pool(config);//create connection pool object
 
-app.get('/', function (req, res) {//Root site directory. the first page that gets opened
-pool.query('SELECT html from "pages" where pagename like '+"'coderider'",function(err,result){
-		if(err){
+function hash(input,salt){
+	var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+	return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
+}
+app.get('/hash/:input',function (req,res){
+	var hashed = hash(req.params.input,'this-is-a-random-string');
+	res.send(hashed);
+}); 
+
+app.post('/login',function(req,res){	
+	var username = req.body.username;
+	var password = req.body.password;	
+	pool.query('SELECT * FROM users WHERE username like $1',[username],function(err,result){
+			if(err){
+			res.send(500).send(err.toString());
+		}
+		else
+			{
+					if(result.rows.length ===0){
+						res.send(403).send('username/password is invalid');
+					}
+					else{
+						var dbString = result.rows[0].passwordhash;
+						var salt = dbString.split('$')[2];
+						var hashedPassword = hash(password,salt);
+						if(hashedPassword === dbString){
+							res.send('credentials are correct');
+						}
+						else
+							{
+								res.send(403).send('Username/password is invalid');
+							}
+					}
+			}
+	});
+});
+app.post('/create-user',function(req,res){
+	
+	var username = req.body.username;
+	var password = req.body.password;
+	var salt = crypto.randomBytes(128).toString('hex');
+	var dbString = hash(password,salt);
+	pool.query('INSERT INTO users (username,passwordhash) VALUES ($1,$2)',[username,dbString],function(err,result){
+			if(err){
 			res.status(500).send(err.toString());
 		}
 		else
 			{
-				if(result.rows.length === 0){
-					res.status(404).send('Article not found');		
-				}
-				else{
-					var pageBody = result.rows[0];
-					res.send(pageBody.html);
-				}
+					res.send('User Successfully created !'+username);
 			}
 	});
 });
+
+app.get('/', function (req, res) {//Root site directory. the first page that gets opened
+ res.sendFile(path.join(__dirname,'ui','coderider.html'));
+});
+
 app.get('/style.css', function (req, res) {//the style page for the home page
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -44,6 +87,15 @@ app.get('/Coder.png', function (req, res) {//image file
 app.get('/skyforge.png', function (req, res) {//image file
   res.sendFile(path.join(__dirname, 'ui', 'skyforge.png'));
 });
+app.get('/login.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','login.html'));
+})
+app.get('/signup.html',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','signup.html'));
+})
+app.get('/loginstyle.css',function(req,res){
+	res.sendFile(path.join(__dirname,'ui','loginstyle.css'));
+})
 app.get('/main.js', function (req, res) {//the main javascript file
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
@@ -51,57 +103,13 @@ app.get('/codeforge',function (req,res){//the first of the three blog pages
     res.sendFile(path.join(__dirname,'ui', 'codeforge.html'));
 });
 app.get('/pages/:pagename',function(req,res){
-	pool.query("SELECT html FROM pages WHERE pagename like $1",[req.params.pagename],function(err,result){
-		if(err){
-			res.status(500).send(err.toString());
-		}
-		else
-			{
-				if(result.rows.length === 0){
-					res.status(404).send('Article not found');		
-				}
-				else{
-					var pageBody = result.rows[0];
-					res.send(pageBody.html);
-				}
-			}
-	});
+	res.sendFile(path.join(__dirname,'ui',[req.params.pagename]+".html"));
 });
 app.get('/styles/:pagename',function(req,res){
-	pool.query("SELECT css from pages where pagename like $1",[req.params.pagename],function(err,result){
-		if(err){
-			res.status(500).send(err.toString());
-		}
-		else
-			{
-				if(result.rows.length === 0){
-					res.status(404).send('Article not found');		
-				}
-				else{
-					var pageBody = result.rows[0]["css"];
-					var len = pageBody.length;
-					res.send(pageBody);
-				}
-			}
-	});
+	res.sendFile(path.join(__dirname,'ui',[req.params.pagename]+".css"));
 });
 app.get('/scripts/:pagename',function(req,res){
-	pool.query("SELECT js FROM pages WHERE pagename like $1",[req.params.pagename],function(err,result){
-		if(err){
-			res.status(500).send(err.toString());
-		}
-		else
-			{
-				if(result.rows.length === 0){
-					res.status(404).send('Article not found');		
-				}
-				else{
-					var pageBody = result.rows[0]["js"];
-					var len = pageBody.length;
-					res.send(pageBody);
-				}
-			}
-	});
+	res.sendFile(path.join(__dirname,'ui',[req.params.pagename]+".js"));
 });
 app.get('/userlist',function(req,res){//in case the db is called
 	var email = "rkmenon235@gmail.com";

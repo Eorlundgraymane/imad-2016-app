@@ -1,14 +1,18 @@
 .container
 {	
+	position:relative;
 	padding: 0;
 	margin: 0;
 	background-image: url('/Coder.png');
-	background-size: cover;
-  background-position: -300px 100px;
+	background-size: 150% 140%;
+	width: 100%;
+	top: 0;
+	left: 0;
 	animation-name: fadeIn;
 	animation-duration: 10s;
+	min-width: 89%;
 	animation-iteration-count: infinite;
-	animation-timing-function: steps();
+	animation-timing-function: ease-in-out;
 	@-webkit-animation-name: fadeIn
 	@-webkit-animation-duration:10s;
 	@-webkit-animarion-iteration-count: infinite;
@@ -20,37 +24,45 @@
 }
 @keyframes fadeIn
 {
-	0%{background-position: -300px 100px;}
-	30%{background-position: -300px -610px;}
-	100%{background-position: -300px -610px;}
+	0%{background-position: 100% 0%;}
+	50%{background-position: 100% 350%;}
+	100%{background-position: 100% 350%;}
 }
 #regform
 {	
 	display: inline;
-	position: absolute;
-	left: 800px;
+	position: relative;
+	right: 0;
 	color: white;
 	font-family: century-schoolbook;
 	float: right;
-	max-width: 600px;
+	width: 45%;
 }
 .bannerhead
 {	
+	position: relative;
 	border-bottom: 2px solid white;
-	padding-bottom: 10px;
+	padding-bottom: 1%;
 	float: left;
 	margin: 0;
-	padding-left: 30px;
-	padding-top: 10px;
+	padding-left: 1.5%;
+	padding-top: 1%;
 	background-color: black;
 	font-family: cursive;
 	color: white;
 	width: 100%;
 	font-size: 30px;
 }
+.loginny
+{
+	position: relative;
+	width: 35%;
+	top: 50%;
+	right: 0%;
+}
 .loginybuttony
 {
-	width: 200px;
+	width:30%;
 	font-size: 20px;
 	transition-property: all;
 	transition-duration: 0.2s;
@@ -91,6 +103,7 @@
 }
 .formytexty
 {
+	position: relative;
 	padding-left: 10px;
 	width: 100%;
 	font-size: 20px;
@@ -98,6 +111,7 @@
 }
 .loggyinny
 {
+	position: relative;
 	padding-right: 30px;
 	float: right;
 }
