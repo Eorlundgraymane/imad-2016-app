@@ -32,11 +32,11 @@
 {	
 	display: inline;
 	position: relative;
-	right: 0;
 	color: white;
 	font-family: century-schoolbook;
 	float: right;
-	width: 45%;
+	right: 15%;
+	width: 25%;
 }
 .bannerhead
 {	
@@ -80,7 +80,7 @@
 .signupybuttony
 {	
 	border-radius: 20px;
-	width: 400px;
+	width: 70%;
 	font-size: 25px;
 	transition-property: all;
 	transition-duration: 0.2s;
