@@ -123,7 +123,7 @@ app.get('/scripts/:pagename',function(req,res){
 app.get('/userlist',function(req,res){//in case the db is called
 	var email = "rkmenon235@gmail.com";
 	var pwd = "rkm235";
-	pool.query('SELECT name FROM "codeusers";', function(err , result){//what query to be passed
+	pool.query('SELECT fname FROM "codeusers";', function(err , result){//what query to be passed
 		if(err){
 			res.status(500).send(err.toString());//if error is found show 500 error
 		}
