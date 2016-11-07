@@ -1,4 +1,4 @@
-window.onload = function(){
+
        alert("Log In Script Ready");
     var submit = document.getElementById('loginbutton');
     submit.onclick = function(){
@@ -27,4 +27,3 @@ window.onload = function(){
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({email:email,password:password}));
     };
-};
