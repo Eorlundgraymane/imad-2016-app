@@ -38,7 +38,7 @@
       var head= document.getElementsByTagName('head')[0];
       var script= document.createElement('script');
       script.type= 'text/javascript';
-      script.src= '/scripts/signup';
+      script.src= '/scripts/signup?ver<%=DateTime.Now.Ticks.ToString()%';
       head.appendChild(script);
    }
     load_js();
