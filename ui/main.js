@@ -16,11 +16,11 @@ submit.onclick = function(){
 			}
 		}
 	};
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
+var email = document.getElementById('emailin').value;
+var password = document.getElementById('passin').value;
 console.log(username);
 console.log(password);
 request.open('POST','http://eorlundgraymane.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type', 'application/json');
-request.send(JSON.stringify({username:username,password:password}));
+request.send(JSON.stringify({email:email,password:password}));
 };
