@@ -1,5 +1,6 @@
 var regy = document.getElementById('signupbutton');
 alert(regy.value);
+console.log(reg.value);
 regy.onclick = function(){
     alert(username.value);
     alert(password.value);
