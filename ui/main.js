@@ -1,5 +1,4 @@
-
-       alert("Log In Script Ready");
+alert("Log In Script Ready");
     var submit = document.getElementById('loginbutton');
     submit.onclick = function(){
     var email = document.getElementById('emailin').value;
