@@ -1,6 +1,6 @@
-while(!$(document.ready(function(){})))
-{}
-var regy = document.getElementById('signupbutton');
+$(document).ready(function(){var regy = document.getElementById('signupbutton');
+alert(regy);});
+alert("Test");
 regy.onclick = function(){
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
