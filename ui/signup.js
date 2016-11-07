@@ -13,7 +13,7 @@ regy.onclick = function(){
 					alert("Creates Account successfully");		
 				}
 			else if(request.status === 403){
-				alert('Something is 404');
+				alert('Something is 403');
 			}
 			else if(request.status === 500){
 				alert('Something is wrong on the server 500');
