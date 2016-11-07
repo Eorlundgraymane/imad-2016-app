@@ -129,9 +129,9 @@ app.get('/userlist',function(req,res){//in case the db is called
 		}
 		else{
 		    	res.send('<html><link href="/forgestyle.css" rel="stylesheet"/><script type="text/javascript" src="/forgemain.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><body id = "container">');
-		    for(int i = 0;i<result.rows.length;i++)
+		    for(i = 0;i<result.rows.length;i++)
 			{var len = JSON.stringify(result.rows[i].fname).length;
-		    res.send('<div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[i].fname).substring(1,len-1);+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br>');
+		    res.send('<div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[i].fname).substring(1,len-1)+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br>');
 			}
 		res.send('<div id = "leftmarg">More Updates Coming Soon</div></body></html>');//else return the query result as a JSON string
 		}
