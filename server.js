@@ -4,6 +4,9 @@ var path = require('path');
 var Pool = require('pg').Pool;//Postgres connetion pool
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+response.setHeader("Pragma", "no-cache"); // HTTP 1.0.
+response.setHeader("Expires", "0"); // Proxies.
 var config = 
 		{
 			user: 'eorlundgraymane',//credentials used to login to db in this case imad db
