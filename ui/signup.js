@@ -11,7 +11,7 @@ regy.onclick = function(){
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
 		if(request.readyState === XMLHttpRequest.DONE){
-			if(request.status === 200)
+			if(request.status === 502)
 				{
 					console.log("user created");
 					alert("Creates Account successfully");		
