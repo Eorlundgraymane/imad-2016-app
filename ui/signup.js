@@ -1,6 +1,5 @@
-alert("Ready");
+alert("Sign Up Script Ready");
 var regy = document.getElementById('signupbutton');
-alert(regy.value);
 regy.onclick = function(){
     	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
