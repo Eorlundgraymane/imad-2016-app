@@ -1,9 +1,6 @@
 var regy = document.getElementById('signupbutton');
-alert(regy.value);
-console.log(reg.value);
+alert(regy);
 regy.onclick = function(){
-    alert(username.value);
-    alert(password.value);
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
 		if(request.readyState === XMLHttpRequest.DONE){
