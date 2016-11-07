@@ -1,3 +1,4 @@
+alert("Ready");
 var regy = document.getElementById('signupbutton');
 alert(regy);
 regy.onclick = function(){
