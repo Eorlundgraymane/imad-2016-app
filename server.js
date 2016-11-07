@@ -117,6 +117,9 @@ app.get('/pages/:pagename',function(req,res){
 app.get('/styles/:pagename',function(req,res){
 	res.sendFile(path.join(__dirname,'ui',[req.params.pagename]+".css"));
 });
+app.get('/scripts/:pagename',function(req,res){
+	res.sendFile(path.join(__dirname,'ui',[req.params.pagename]+".js"));
+});
 app.get('/userlist',function(req,res){//in case the db is called
 	var email = "rkmenon235@gmail.com";
 	var pwd = "rkm235";
