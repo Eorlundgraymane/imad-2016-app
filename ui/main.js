@@ -63,4 +63,4 @@ function loginready()
     request.send(JSON.stringify({email:email,password:password}));
     };
 }
-$(document).ready(function(){signupready();loginready();});
+document.ready(function(){signupready();loginready();});
