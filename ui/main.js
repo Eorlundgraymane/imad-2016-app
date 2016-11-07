@@ -1,5 +1,9 @@
 var submit = document.getElementById('loginbutton');
 submit.onclick = function(){
+    var email = document.getElementById('emailin').value;
+var password = document.getElementById('passin').value;
+console.log(email);
+console.log(password);
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
 		if(request.readyState === XMLHttpRequest.DONE){
@@ -16,10 +20,6 @@ submit.onclick = function(){
 			}
 		}
 	};
-var email = document.getElementById('emailin').value;
-var password = document.getElementById('passin').value;
-console.log(email);
-console.log(password);
 request.open('POST','http://eorlundgraymane.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({email:email,password:password}));
