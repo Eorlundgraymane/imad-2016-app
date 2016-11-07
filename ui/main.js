@@ -1,4 +1,4 @@
-window.onload = function(){var submit = document.getElementById('loginbutton');}
+var submit = document.getElementById('loginbutton');
 submit.onclick = function(){
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
