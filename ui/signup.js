@@ -1,3 +1,5 @@
+while(!$(document.ready()))
+{}
 var regy = document.getElementById('signupbutton');
 regy.onclick = function(){
 	var request = new XMLHttpRequest();
