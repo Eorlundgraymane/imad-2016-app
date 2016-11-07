@@ -1,5 +1,3 @@
-$(document).ready(function(){var regy = document.getElementById('signupbutton');
-alert(regy);});
 regy.onclick = function(){
     alert(username.value);
     alert(password.value);
