@@ -1,4 +1,5 @@
-   var regy = document.getElementById('signupbutton');
+window.onload = function(){
+    var regy = document.getElementById('signupbutton');
     regy.onclick = function(){
     	var email = document.getElementById('email').value;
     	var password = document.getElementById('password').value;
@@ -29,3 +30,4 @@
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({fname:fname,lname:lname,email:email,password:password,dob:dob}));
     };
+};
