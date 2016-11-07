@@ -1,4 +1,5 @@
 window.onload = function(){
+       alert("Log In Script Ready");
     var submit = document.getElementById('loginbutton');
     submit.onclick = function(){
     var email = document.getElementById('emailin').value;
@@ -19,7 +20,7 @@ window.onload = function(){
     			}
     		}
     	};
-    alert("Log In Script Ready");
+
     console.log(email);
     console.log(password);
     request.open('POST','http://eorlundgraymane.imad.hasura-app.io/login',true);
