@@ -13,7 +13,7 @@
 	min-width: 89%;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
-	@-webkit-animation-name: fadeIn
+	@-webkit-animation-name: fadeIn;
 	@-webkit-animation-duration:10s;
 	@-webkit-animarion-iteration-count: infinite;
 	@-webkit-animation-timing-funtion:steps();
