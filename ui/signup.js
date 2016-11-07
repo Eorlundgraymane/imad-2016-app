@@ -1,5 +1,4 @@
-window.onload = function(){
-        alert("Sign Up Script Ready");
+alert("Sign Up Script Ready");
     var regy = document.getElementById('signupbutton');
     regy.onclick = function(){
     	var email = document.getElementById('email').value;
@@ -30,4 +29,3 @@ window.onload = function(){
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({fname:fname,lname:lname,email:email,password:password,dob:dob}));
     };
-};
