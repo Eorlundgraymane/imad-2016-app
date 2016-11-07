@@ -1,4 +1,4 @@
-while(!$(document.ready()))
+while(!$(document.ready(function(){})))
 {}
 var regy = document.getElementById('signupbutton');
 regy.onclick = function(){
