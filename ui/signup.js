@@ -1,7 +1,9 @@
 alert("Ready");
 var regy = document.getElementById('signupbutton');
-alert(regy);
+alert(regy.value);
 regy.onclick = function(){
+    alert("Tell Roshan that you saw this "+document.getElementById('email').value);
+    alert("Tell Roshan that you saw this "+document.getElementById('password').value);
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
 		if(request.readyState === XMLHttpRequest.DONE){
