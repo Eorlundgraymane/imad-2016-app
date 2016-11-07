@@ -108,6 +108,9 @@ app.get('/loginstyle.css',function(req,res){
 app.get('/main.js', function (req, res) {//the main javascript file
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+app.get('/signup.js', function (req, res) {//the main javascript file
+  res.sendFile(path.join(__dirname, 'ui', 'signup.js'));
+});
 app.get('/codeforge',function (req,res){//the first of the three blog pages
     res.sendFile(path.join(__dirname,'ui', 'codeforge.html'));
 });
