@@ -17,11 +17,14 @@ regy.onclick = function(){
 			}
 		}
 	};
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
-console.log(username);
-console.log(password);
-request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true);
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	var fname = document.getElementById('fname').value;
+	var lname = document.getElementById('lname').value;
+	var dob = document.getElementById('date').value;
+	
+console.log(email);
+request.open('POST','http://localhost:8080/create-user',true);
 request.setRequestHeader('Content-Type', 'application/json');
-request.send(JSON.stringify({username:username,password:password}));
+request.send(JSON.stringify({fname:fname,lname:lname,email:email,password:password,dob:dob}));
 };

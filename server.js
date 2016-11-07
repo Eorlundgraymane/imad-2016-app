@@ -56,11 +56,14 @@ app.post('/login',function(req,res){
 });
 app.post('/create-user',function(req,res){
 	
-	var username = req.body.username;
+	var email = req.body.email;
 	var password = req.body.password;
+	var fname  = req.body.fname;
+	var lname = req.body.lname;
+	var dob = req.body.dob;
 	var salt = crypto.randomBytes(128).toString('hex');
 	var dbString = hash(password,salt);
-	pool.query('INSERT INTO users (username,passwordhash) VALUES ($1,$2)',[username,dbString],function(err,result){
+	pool.query('INSERT INTO codeusers (email,passwordhash,fname,lname,dateob) VALUES ($1,$2,$3,$4,$5)',[email,dbString,fname,lname,dob],function(err,result){
 			if(err){
 			res.status(500).send(err.toString());
 		}
