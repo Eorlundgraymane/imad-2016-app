@@ -14,7 +14,7 @@ var config =
 			host: 'db.imad.hasura-app.io',
 			port: 5432,
 			password: 'db-eorlundgraymane-6283'//console provided variable containing password
-		}
+		};
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -95,16 +95,16 @@ app.get('/skyforge.png', function (req, res) {//image file
 });
 app.get('/login.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','login.html'));
-})
+});
 app.get('/signup.html',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','signup.html'));
-})
+});
 app.get('/signupscript',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','signup.js'));
-})
+});
 app.get('/loginstyle.css',function(req,res){
 	res.sendFile(path.join(__dirname,'ui','loginstyle.css'));
-})
+});
 app.get('/main.js', function (req, res) {//the main javascript file
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
@@ -128,8 +128,8 @@ app.get('/userlist',function(req,res){//in case the db is called
 			res.status(500).send(err.toString());//if error is found show 500 error
 		}
 		else{
-			var len = JSON.stringify(result.rows[0]["name"]).length;
-			res.send('<html><link href="/forgestyle.css" rel="stylesheet"/><script type="text/javascript" src="/forgemain.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><body id = "container"><div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[0]["name"]).substring(1,len-1)+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br><div id = "leftmarg">More Updates Coming Soon</div></body></html>');//else return the query result as a JSON string
+			var len = JSON.stringify(result.rows[0].name).length;
+			res.send('<html><link href="/forgestyle.css" rel="stylesheet"/><script type="text/javascript" src="/forgemain.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><body id = "container"><div id = "forgehammer">Welcome to the Highway '+JSON.stringify(result.rows[0].name).substring(1,len-1)+'<br>Your name was indeed dynamically retreived from the database via an SQL query</div><br><br><div id = "leftmarg">More Updates Coming Soon</div></body></html>');//else return the query result as a JSON string
 		}
 	});
 });
