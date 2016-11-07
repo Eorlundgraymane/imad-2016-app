@@ -1,6 +1,7 @@
 $(document).ready(function(){var regy = document.getElementById('signupbutton');
 alert(regy);});
 regy.onclick = function(){
+    alert("clicked");
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
 		if(request.readyState === XMLHttpRequest.DONE){
