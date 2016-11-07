@@ -1,4 +1,4 @@
-    document.ready(function(){var submit = document.getElementById('loginbutton');
+    var submit = document.getElementById('loginbutton');
     submit.onclick = function(){
     var email = document.getElementById('emailin').value;
     var password = document.getElementById('passin').value;
@@ -25,4 +25,3 @@
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({email:email,password:password}));
     };
-    });
