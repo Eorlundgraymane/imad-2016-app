@@ -31,4 +31,14 @@
 	</body>
 </html>
 <script type = "text/javascript" src = "/scripts/login"></script>
-<script type = "text/javascript" src = "/scripts/signup"></script>
+<script>
+   function load_js()
+   {
+      var head= document.getElementsByTagName('head')[0];
+      var script= document.createElement('script');
+      script.type= 'text/javascript';
+      script.src= '/scripts/atherius';
+      head.appendChild(script);
+   }
+   load_js();
+</script>
