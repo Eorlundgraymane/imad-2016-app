@@ -1,3 +1,4 @@
+window.onload = function(){
     var submit = document.getElementById('loginbutton');
     submit.onclick = function(){
     var email = document.getElementById('emailin').value;
@@ -25,3 +26,4 @@
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({email:email,password:password}));
     };
+};
