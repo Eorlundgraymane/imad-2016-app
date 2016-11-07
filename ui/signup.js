@@ -1,4 +1,3 @@
-    alert("Sign Up Script Ready");
     var regy = document.getElementById('signupbutton');
     regy.onclick = function(){
     	var email = document.getElementById('email').value;
@@ -23,6 +22,7 @@
     			}
     		}
     	};
+    alert("Sign Up Script Ready");
     console.log(dob);
     console.log(email);
     request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true);
