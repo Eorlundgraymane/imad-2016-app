@@ -24,7 +24,7 @@ regy.onclick = function(){
 	var dob = document.getElementById('date').value;
 	
 console.log(email);
-request.open('POST','http://localhost:8080/create-user',true);
+request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true);
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({fname:fname,lname:lname,email:email,password:password,dob:dob}));
 };
