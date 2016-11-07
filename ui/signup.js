@@ -22,7 +22,7 @@ regy.onclick = function(){
 	var fname = document.getElementById('fname').value;
 	var lname = document.getElementById('lname').value;
 	var dob = document.getElementById('date').value;
-	
+	console.log(dob);
 console.log(email);
 request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true);
 request.setRequestHeader('Content-Type', 'application/json');
