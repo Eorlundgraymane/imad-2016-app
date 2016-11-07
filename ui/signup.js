@@ -1,4 +1,4 @@
-window.onload = function(){var regy = document.getElementById('signupbutton');
+$(document).ready(function(){var regy = document.getElementById('signupbutton');
 alert(regy);
 regy.onclick = function(){
 	var request = new XMLHttpRequest();
@@ -25,4 +25,4 @@ request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true
 request.setRequestHeader('Content-Type', 'application/json');
 request.send(JSON.stringify({username:username,password:password}));
 };
-};
+});
