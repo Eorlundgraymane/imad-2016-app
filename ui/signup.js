@@ -1,5 +1,5 @@
-var regy = document.getElementById('signupbutton');
-alert(regy);
+$(document).ready(function(){var regy = document.getElementById('signupbutton');
+alert(regy);});
 regy.onclick = function(){
 	var request = new XMLHttpRequest();
 	request.onreadystatechange = function(){
