@@ -26,5 +26,5 @@ regy.onclick = function(){
 console.log(email);
 request.open('POST','http://eorlundgraymane.imad.hasura-app.io/create-user',true);
 request.setRequestHeader('Content-Type', 'application/json');
-request.send(JSON.stringify({fname:fname,lname:lname,email:email,password:password,dob:dob}));
+request.send(JSON.stringify({fname:fname,lname:lname,email:email,passwordhash:password,dateob:dob}));
 };
