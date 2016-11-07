@@ -18,7 +18,7 @@ submit.onclick = function(){
 	};
 var email = document.getElementById('emailin').value;
 var password = document.getElementById('passin').value;
-console.log(username);
+console.log(email);
 console.log(password);
 request.open('POST','http://eorlundgraymane.imad.hasura-app.io/login',true);
 request.setRequestHeader('Content-Type', 'application/json');
