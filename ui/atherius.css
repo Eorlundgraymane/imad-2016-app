@@ -4,7 +4,7 @@
 	padding: 0;
 	margin: 0;
 	background-image: url('/Coder.png');
-	background-size: 150% 140%;
+	background-size: 150% 150%;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -24,9 +24,9 @@
 }
 @keyframes fadeIn
 {
-	0%{background-position: 100% 0%;}
-	50%{background-position: 100% 350%;}
-	100%{background-position: 100% 350%;}
+	0%{background-position: 100% -60%;}
+	50%{background-position: 100% 240%;}
+	100%{background-position: 100% 240%;}
 }
 #regform
 {	
@@ -35,8 +35,9 @@
 	color: white;
 	font-family: century-schoolbook;
 	float: right;
-	right: 15%;
-	width: 25%;
+	right: 5%;
+	width: auto;
+	max-width: 48%;
 }
 .bannerhead
 {	
@@ -96,7 +97,7 @@
 }
 .names
 {
-	width: 45%;
+	width: 44%;
 	padding-left: 10px;
 	font-size: 20px;
 	border-radius: 8px;
