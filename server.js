@@ -37,12 +37,12 @@ app.post('/login',function(req,res){
 	var password = req.body.password;	
 	pool.query('SELECT * FROM codeusers WHERE email like $1',[email],function(err,result){
 			if(err){
-			res.send(500).send(err.toString());
+			res.sendStatus(500).send(err.toString());
 		}
 		else
 			{
 					if(result.rows.length ===0){
-						res.send(403).send('email/password is invalid');
+						res.sendStatus(403).send('email/password is invalid');
 					}
 					else{
 						var dbString = result.rows[0].passwordhash;
@@ -50,11 +50,11 @@ app.post('/login',function(req,res){
 						var hashedPassword = hash(password,salt);
 						if(hashedPassword === dbString){
 						    req.session.auth = {useId: result.rows[0].id};
-							res.send(200).send('credentials are correct');
+							res.sendStatus(200).send('credentials are correct');
 						}
 						else
 							{
-								res.send(403).send('Username/password is invalid');
+								res.sendStatus(403).send('Username/password is invalid');
 							}
 					}
 			}
