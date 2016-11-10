@@ -19,8 +19,6 @@ app.use(bodyParser.json());
 app.use(session({
     secret: "someRandomSecretKey",
     cookie: {maxAge: 1000*60*60*24*30},
-    resave: true,
-    saveUninitialized: true
 }));
 
 var pool = new Pool(config);//create connection pool object
