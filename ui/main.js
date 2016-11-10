@@ -24,6 +24,5 @@ alert("Log In Script Ready");
     console.log(password);
     request.open('POST','http://eorlundgraymane.imad.hasura-app.io/login',true);
     request.setRequestHeader('Content-Type', 'application/json');
-    alert(email);alert(password);
     request.send(JSON.stringify({email:email,password:password}));
     };
