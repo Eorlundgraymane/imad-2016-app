@@ -51,7 +51,6 @@ app.post('/login',function(req,res){
 						if(hashedPassword === dbString){
 						    req.session.auth = {useId: result.rows[0].id};
 							res.send(200).send('credentials are correct');
-							
 						}
 						else
 							{
@@ -60,6 +59,17 @@ app.post('/login',function(req,res){
 					}
 			}
 	});
+});
+app.get('/chech-login',function(req,res){
+   if(req.session && req.session.auth && req.session.auth.userId)
+   {
+       res.send("User logged in");
+       
+   }
+   else
+   {
+       res.send("Not Logged in");
+   }
 });
 app.post('/create-user',function(req,res){
 	
