@@ -63,7 +63,7 @@ app.post('/login',function(req,res){
 app.get('/chech-login',function(req,res){
    if(req.session && req.session.auth && req.session.auth.userId)
    {
-       res.send("User logged in");
+       res.send("User logged in "+req.session.auth.userId.toString());
        
    }
    else
